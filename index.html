@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Solana Wallet Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Solana Wallet Tracker</h1>
+    <input type="text" id="walletAddress" placeholder="Enter Solana address">
+    <button onclick="trackWallet()">Track</button>
+
+    <h2>Wallet Info:</h2>
+    <div id="walletInfo">
+        <p>Balance: <span id="balance">--</span> SOL</p>
+        <div id="tokens"></div> 
+        <div id="transactions"></div> 
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
