@@ -1,20 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solana Wallet Tracker</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Solana Wallet Tracker</h1>
-    <input type="text" id="walletAddress" placeholder="Enter Solana address">
-    <button onclick="trackWallet()">Track</button>
+    <header>
+        <div class="container">
+            <img src="https://i.imgur.com/JV7HQMU.png" alt="Vertex Logo" id="logo">
+            <h1>Solana Wallet Tracker</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <h2>Wallet Info:</h2>
-    <div id="walletInfo">
-        <p>Balance: <span id="balance">--</span> SOL</p>
-        <div id="tokens"></div> 
-        <div id="transactions"></div> 
-    </div>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Track your Solana assets with ease.</h2>
+                <p>Get real-time insights into your Solana wallets, including balances, tokens, and transaction history.</p>
+                <div class="input-group">
+                    <input type="text" id="walletAddress" placeholder="Enter Solana address">
+                    <button onclick="trackWallet()">Track</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Key Features</h2>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <h3>Real-time Tracking</h3>
+                        <p>Monitor your Solana balances and transactions in real-time.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Token Support</h3>
+                        <p>Track all your SPL tokens and other custom tokens.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Transaction History</h3>
+                        <p>View a detailed history of your Solana transactions.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Portfolio Overview</h3>
+                        <p>Get a comprehensive overview of your Solana portfolio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wallet-info">
+            <div class="container">
+                <h2>Wallet Information</h2>
+                <div id="walletInfo">
+                    <p>Balance: <span id="balance">--</span> SOL</p>
+                    <div id="tokens"></div>
+                    <div id="transactions"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Vertex</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

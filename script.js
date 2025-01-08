@@ -1,12 +1,15 @@
+// script.js (Frontend)
 function trackWallet() {
     const address = document.getElementById('walletAddress').value;
-    // Basic address validation (improve this)
-    if (!address.startsWith(' ')) { 
+
+    // Improved validation using a regular expression
+    const solanaAddressRegex = /^[1-9A-HJ-NP-Za-km-z]{32,44}$/;
+    if (!solanaAddressRegex.test(address)) {
         alert('Invalid Solana address');
         return;
     }
 
-    fetchWalletData(address);
+    fetchWalletData(address); 
 }
 
 async function fetchWalletData(address) {

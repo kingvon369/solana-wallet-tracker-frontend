@@ -1,23 +1,27 @@
+// index.js (Backend)
 const express = require('express');
 const web3 = require('@solana/web3.js');
 
 const app = express();
-const port = process.env.PORT || 3000; // Use the port provided by the hosting platform
+const port = process.env.PORT || 3000;
 
-app.use(express.json()); // To parse JSON requests
+app.use(express.json());
 
 app.post('/getWalletData', async (req, res) => {
     const address = req.body.address;
-    const connection = new web3.Connection(web3.clusterApiUrl('mainnet-beta'));
-    const publicKey = new web3.PublicKey(address);
 
     try {
+        // Validate the address by trying to construct a PublicKey
+        const publicKey = new web3.PublicKey(address); 
+
+        const connection = new web3.Connection(web3.clusterApiUrl('mainnet-beta'));
         const balance = await connection.getBalance(publicKey);
-        // ... (fetch token balances and transaction history) ...
+        // ... Fetch token balances and transaction history ...
+
         res.json({ balance /*, tokens, transactions */ }); 
     } catch (error) {
         console.error('Error fetching data:', error);
-        res.status(500).json({ error: 'Failed to fetch data' });
+        res.status(400).json({ error: 'Invalid Solana address' }); // Specific error message
     }
 });
 

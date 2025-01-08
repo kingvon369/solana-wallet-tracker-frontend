@@ -1,6 +1,137 @@
 body {
-    font-family: sans-serif;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    color: #23253A;
+    margin: 0;
 }
+
+.container {
+    max-width: 960px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #23253A;
+    font-weight: bold;
+}
+
+/* Hero Section Styles */
+.hero {
+    background: linear-gradient(to right, #00FFA3, #DC1FFF);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* Input Group Styles */
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #98SBC8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Features Section Styles */
+.features {
+    padding: 60px 0;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px;
+}
+
+.feature {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.feature h3 {
+    color: #23253A;
+}
+
+/* Wallet Info Section Styles */
+.wallet-info {
+    padding: 60px 0;
+}
+
 #walletInfo {
-    margin-top: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#balance {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
